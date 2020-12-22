@@ -1,0 +1,457 @@
+.podcast {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  align-self: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 16px;
+}
+@media screen and (min-width: 992px) {
+  .podcast {
+    padding: 0 24px;
+  }
+}
+.podcast__load-more-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 34px 0 100px;
+}
+.podcast__load-more-container__text {
+  font-family: SamsungOne-700C;
+  font-size: 12px;
+  line-height: 2;
+  color: light-blue;
+  text-transform: uppercase;
+  text-decoration: underline;
+  letter-spacing: 0.75px;
+}
+.podcast__load-more-container__hidden {
+  display: none;
+}
+.podcast__warning {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  overflow: hidden;
+  padding: 0;
+  position: fixed;
+  background-color: rgba(31, 33, 41, 0.5);
+}
+@media screen and (min-width: 992px) {
+  .podcast__warning {
+    align-items: center;
+  }
+}
+.podcast__warning__popup {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 420px;
+  overflow: hidden;
+  position: relative;
+  background-color: white;
+  flex-direction: column;
+  border-radius: 32px 32px 0 0;
+}
+@media screen and (min-width: 992px) {
+  .podcast__warning__popup {
+    border-radius: 8px;
+    width: 432px;
+    height: 440px;
+  }
+}
+.podcast__warning__popup__title {
+  color: black;
+  margin-bottom: 18px;
+}
+@media screen and (min-width: 992px) {
+  .podcast__warning__popup__title {
+    margin-bottom: 24px;
+  }
+}
+.podcast__warning__popup__text {
+  max-width: 235px;
+  color: black;
+  margin-bottom: 56px;
+  text-align: center;
+}
+@media screen and (min-width: 992px) {
+  .podcast__warning__popup__text {
+    margin-bottom: 48px;
+    max-width: 220px;
+  }
+}
+.podcast__warning__popup__button {
+  background: black;
+  border: 0;
+  border-radius: 48px;
+  color: white;
+  font-family: SamsungOne-700C;
+  font-size: 14px;
+  letter-spacing: 2px;
+  line-height: 1;
+  min-width: 80%;
+  padding: 17px 34px;
+  text-transform: uppercase;
+  margin-bottom: 39px;
+}
+@media screen and (min-width: 992px) {
+  .podcast__warning__popup__button {
+    font-size: 12px;
+    padding: 18px 28px;
+    min-width: 200px;
+    margin-bottom: 33px;
+  }
+}
+.podcast__warning__popup__close {
+  padding: 10px 40px;
+  border-radius: 20px;
+  background: #151615;
+  font-family: SamsungOne-700C;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.8px;
+  color: white;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+.btn:hover{
+  cursor: pointer;
+}
+.hide{
+  display: none;
+}
+.podcast__episode {
+  display: flex;
+  flex-direction: column;
+  width: 744px;
+  max-width: 100%;
+  background-color: black;
+  border-radius: 8px;
+  padding: 32px 32px 40px;
+  margin: 0 0 16px;
+  min-height: 322px;
+  cursor: pointer;
+}
+@media screen and (min-width: 992px) {
+  .podcast__episode {
+    flex-direction: row;
+    padding: 32px 32px 0;
+    min-height: 176px;
+  }
+}
+.podcast__episode__hidden {
+  display: none;
+}
+.podcast__episode__thumbnail-container {
+  display: flex;
+}
+.podcast__episode__thumbnail-container__title {
+  color: white;
+  font-family: SamsungSharp;
+  font-size: 24px;
+  line-height: 1.33;
+  margin-top: 3px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+@media screen and (min-width: 992px) {
+  .podcast__episode__thumbnail-container__title {
+    display: none;
+  }
+}
+.podcast__episode__thumbnail-container__img-container {
+  display: flex;
+  margin-right: 24px;
+  width: 96px;
+  height: 96px;
+}
+@media screen and (min-width: 992px) {
+  .podcast__episode__thumbnail-container__img-container {
+    width: 112px;
+    height: 112px;
+    margin-right: 32px;
+  }
+}
+.podcast__episode__thumbnail-container__img-container.podcast__episode__thumbnail-container__img-container__hover {
+  position: relative;
+}
+.podcast__episode__thumbnail-container__img-container.podcast__episode__thumbnail-container__img-container__hover .podcast__episode__thumbnail-container__img-container__img {
+  opacity: 0.6;
+}
+.podcast__episode__thumbnail-container__img-container.podcast__episode__thumbnail-container__img-container__hover .podcast__episode__thumbnail-container__img-container__play {
+  display: flex;
+}
+.podcast__episode__thumbnail-container__img-container__img {
+  display: flex;
+  width: 96px;
+  height: 96px;
+  border-radius: 100px;
+}
+@media screen and (min-width: 992px) {
+  .podcast__episode__thumbnail-container__img-container__img {
+    width: 112px;
+    height: 112px;
+  }
+}
+.podcast__episode__thumbnail-container__img-container__play {
+  position: absolute;
+  width: 56px;
+  height: 57px;
+  z-index: 100;
+  background: transparent url("https://lhaynes96.github.io/test/podcast-play-icon.svg") no-repeat;
+  left: 26px;
+  top: 25px;
+  display: none;
+  background-size: 56px 57px;
+}
+
+.podcast__episode__thumbnail-container__img-container__paused {
+  background: transparent url("https://lhaynes96.github.io/test/podcast-pause-icon.svg") no-repeat;
+  background-size: 56px 57px;
+}
+.podcast__episode__audio-player {
+  display: none;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 992px) {
+  .podcast__episode__audio-player {
+    margin-bottom: 8px;
+  }
+}
+.podcast__episode__audio-player__time-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 12px;
+}
+.podcast__episode__audio-player__time-container__current-time,
+.podcast__episode__audio-player__time-container__time-left {
+  font-family: SamsungOne-700C;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: normal;
+  color: gray;
+  display: flex;
+}
+.podcast__episode__audio-player__time-container__current-time {
+  justify-self: flex-start;
+  width: 100%;
+}
+.podcast__episode__audio-player__time-container__time-left {
+  justify-self: flex-end;
+}
+.podcast__episode__audio-player__timeline {
+  display: flex;
+  width: 100%;
+  height: 6px;
+  border-radius: 15px;
+  background: white;
+  position: relative;
+}
+.podcast__episode__audio-player__timeline__playhead {
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  margin-top: -9px;
+  background: green;
+  transition: ease 0.05s;
+}
+.podcast__episode__audio-player__timeline__progress {
+  width: 0;
+  display: flex;
+  height: 6px;
+  border-radius: 15px 0 0 15px;
+  background: linear-gradient(90deg, blue, green);
+  position: absolute;
+  /* transition: 0.2s; */
+}
+.podcast__episode__content-container {
+  display: flex;
+  flex-direction: column;
+}
+.podcast__episode__content-container__title {
+  color: white;
+  font-family: SamsungSharp;
+  font-size: 24px;
+  line-height: 1.33;
+  margin-top: 3px;
+  display: none;
+  justify-items: center;
+  align-items: center;
+}
+@media screen and (min-width: 992px) {
+  .podcast__episode__content-container__title {
+    display: flex;
+  }
+}
+.podcast__episode__content-container__description {
+  color: white;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 0;
+  max-width: 456px;
+}
+@media screen and (min-width: 992px) {
+  .podcast__episode__content-container__description {
+    font-size: 14px;
+    line-height: 1.43;
+  }
+}
+.podcast__episode__content-container__points-container {
+  margin: 21px 0 16px;
+}
+@media screen and (min-width: 992px) {
+  .podcast__episode__content-container__points-container {
+    margin: 8px 0;
+  }
+}
+.podcast__episode__content-container__points-container__icon {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  margin-right: 8px;
+}
+@media screen and (min-width: 992px) {
+  .podcast__episode__content-container__points-container__icon {
+    display: none;
+  }
+}
+.podcast__episode__content-container__points-container__available,
+.podcast__episode__content-container__points-container__earned {
+  text-transform: uppercase;
+  font-family: SamsungOne-700C;
+  font-size: 14px;
+  line-height: 1.29;
+}
+@media screen and (min-width: 992px) {
+  .podcast__episode__content-container__points-container__available,
+  .podcast__episode__content-container__points-container__earned {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}
+.podcast__episode__content-container__points-container__available {
+  color: blue;
+}
+.podcast__episode__content-container__points-container__earned {
+  color: white;
+}
+.podcast__episode__content-container__points-container__divider {
+  color: 992px;
+  font-family: SamsungOne-700C;
+  padding: 0 4px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.podcast__episode__content-container__points-container__duration {
+  color: gray;
+  font-family: SamsungOne-700C;
+  font-size: 14px;
+  line-height: 1.29;
+}
+@media screen and (min-width: 992px) {
+  .podcast__episode__content-container__points-container__duration {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}
+.podcast__episode__open {
+  margin-top: 128px;
+  padding: 32px 24px 56px;
+  border-radius: 25px 25px 8px 8px;
+}
+@media screen and (min-width: 992px) {
+  .podcast__episode__open {
+    flex-direction: column;
+    margin-top: 123px;
+    padding: 32px 131px 54px;
+  }
+}
+.podcast__episode__open .podcast__episode__audio-player {
+  display: flex;
+}
+.podcast__episode__open .podcast__episode__thumbnail-container {
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 40px;
+}
+.podcast__episode__open .podcast__episode__thumbnail-container__img-container {
+  width: 209px;
+  height: 209px;
+  margin: -125px 0 0;
+  position: relative;
+}
+@media screen and (min-width: v) {
+  .podcast__episode__open .podcast__episode__thumbnail-container__img-container {
+    width: 182px;
+    height: 182px;
+  }
+}
+.podcast__episode__open .podcast__episode__thumbnail-container__img-container__img {
+  width: 209px;
+  height: 209px;
+}
+@media screen and (min-width: 992px) {
+  .podcast__episode__open .podcast__episode__thumbnail-container__img-container__img {
+    width: 182px;
+    height: 182px;
+  }
+}
+.podcast__episode__open .podcast__episode__thumbnail-container__img-container__play {
+  display: flex;
+  width: 105px;
+  height: 105px;
+  background-size: 105px;
+  top: 52px;
+  left: 52px;
+}
+@media screen and (min-width: 992px) {
+  .podcast__episode__open .podcast__episode__thumbnail-container__img-container__play {
+    width: 91px;
+    height: 91px;
+    background-size: 91px;
+    top: 46px;
+    left: 46px;
+  }
+}
+.podcast__episode__open .podcast__episode__thumbnail-container__title {
+  display: none;
+}
+.podcast__episode__open .podcast__episode__content-container {
+  text-align: center;
+  padding: 0 8px;
+}
+@media screen and (min-width: 992px) {
+  .podcast__episode__open .podcast__episode__content-container {
+    align-items: center;
+  }
+}
+.podcast__episode__open .podcast__episode__content-container__title {
+  display: flex;
+  color: white;
+}
+.podcast__episode__open .podcast__episode__content-container__points-container {
+  margin: 16px 0;
+}
+.podcast__episode__open .podcast__episode__content-container__points-container__icon {
+  display: none;
+}
+
+
